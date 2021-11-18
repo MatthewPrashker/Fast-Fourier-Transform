@@ -1,6 +1,7 @@
 #ifndef _ARRAY_HPP
 #define _ARRAY_HPP
 #include <algorithm>
+#include <iostream>
 
 class Array {
  
@@ -61,6 +62,8 @@ class Array {
     // copy the value correspondingly
     //return *this;  // do not forget this
   //}
+
+ friend std::ostream& operator<<(std::ostream& os, const Array &rhs);
 
  private:
   double *_data;   ///< data pointer

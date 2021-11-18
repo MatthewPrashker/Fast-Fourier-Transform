@@ -106,5 +106,14 @@ void Array::print() const {
     }
 }
 
+std::ostream& operator<<(std::ostream& os, const Array& A) {
+    for(int i = 0; i < A._size; i++) {
+        os << A._data[i] << " ";
+    }
+    os << "\n";
+    return os;
+}
+
+
 
 
